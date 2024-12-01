@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
-    <h1>Book Details</h1>
-    <script>
-        $(document).ready(function () {
-          
-            const books = [
-                {
-                    title: "The Great Gatsby",
-                    author: "F. Scott Fitzgerald",
-                    publicationYear: 1925,
-                    genres: ["Fiction", "Classics"]
-                },
-                {
-                    title: "To Kill a Mockingbird",
-                    author: "Harper Lee",
-                    publicationYear: 1960,
-                    genres: ["Fiction", "Coming-of-Age"]
-                }
-            ];
-
-            
-            console.log("Title of the first book:", books[0].title);
-
-            
-            console.log("Author of the second book:", books[1].author);
-
-            
-            console.log("Genres of all books:");
-            books.forEach((book, index) => {
-                console.log(`Book ${index + 1}: ${book.genres.join(", ")}`);
-            });
-        });
-    </script>
+        <body>
+        <script>
+            const bookData = {
+            "Books": [
+        {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "publicationYear": 1925,
+        "genres": ["Fiction", "Classics"]
+        },
+        {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "publicationYear": 1960,
+        "genres": ["Fiction", "Coming-of-Age"]
+        }
+    ]
+};
+// (a) The title of the first book
+console.log("Title of the first book: " + bookData.Books[0].title);
+// (b) The author of the second book
+console.log("Author of the second book: " + bookData.Books[1].author);
+// (c) The genres of all books
+bookData.Books.forEach(book => {
+console.log("Genres of " + book.title + ": " + book.genres.join(", "));
+});
+</script>
 </body>
 </html>
